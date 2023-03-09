@@ -37,7 +37,7 @@ public class Exercise {
         }
     }
 
-    // 1. What will the output be if I run sayGoodMorning(false)?
+    // 1. What will the returned value be if I run sayGoodMorning(false)?
     // Change the returned value in the method below to your answer. It is case-sensitive.
     public String one() {
         return "";
@@ -68,32 +68,32 @@ public class Exercise {
     // 6. Use a conditional statement to return "Correct!" if the input is more than 7
     // or "Wrong!" if not
     public String six(int num) {
-
+        return "Not implemented yet!";
     }
 
     // 7. Use a conditional statement to return "Correct!" if the input is false
     // or "Wrong!" if not
     public String seven(boolean bool) {
-
+        return "Not implemented yet!";
     }
 
     // 8. Use a conditional statement to return "Correct!" if numOne is more than or equal to numTwo
     // or "Wrong!" if not
     public String eight(int numOne, int numTwo) {
-
+        return "Not implemented yet!";
     }
 
     // 9. Use a conditional statement to return true if the array provided is not empty
     // or false if it is empty
     public boolean nine(int[] nums) {
-
+        return false;
     }
 
     // 10. Use a conditional statement to return true if the provided string contains the word
     // "milk", or false if not
     // https://www.w3schools.com/java/java_ref_string.asp
     public boolean ten(String sentence) {
-
+        return false;
     }
 
     // 11. Use conditional statements to return the number 3 if the provided string contains
@@ -101,13 +101,13 @@ public class Exercise {
     // Return the number 9 if the string contains both coffee and milk.
     // Otherwise, return the number 0.
     public int eleven(String sentence) {
-
+        return -1;
     }
 
     // 12. Use conditional statements to return true if num is more than or equal to lower and is
     // less than or equal to upper, otherwise return false.
     public boolean twelve(int num, int lower, int upper) {
-
+        return false;
     }
 
     /*
@@ -123,6 +123,6 @@ public class Exercise {
         20+     | Adult
      */
     public String thirteen(int age) {
-
+        return "Not implemented yet!";
     }
 }

@@ -1,6 +1,8 @@
 package com.booleanuk.extension;
 
-public class Extension {
+import com.booleanuk.helpers.ExtensionBase;
+
+public class Extension extends ExtensionBase {
     /*  1.
         We're going to improve our cake baking capabilities!
 
@@ -27,13 +29,13 @@ public class Extension {
 
 
 
-
     /*  3.
         Create a method named calculateGramsOfSugar that accepts two parameters:
         - an array of ingredients that will always contain 3 ingredients
         - the number of layers the cake has
 
-        The cake will need 100g of sugar per layer, if that ingredient is present in the provided list of ingredients.
+        The cake will need 100g of sugar per layer, if that ingredient is present in the provided list of ingredients
+        and 0g if that ingredient is missing.
         The method should return the number of grams of sugar needed to make the cake.
      */
 

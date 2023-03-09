@@ -2,7 +2,11 @@ package com.booleanuk.extension;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.TestMethodOrder;
 
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class ExtensionTest {
     Extension extension;
 
@@ -11,6 +15,7 @@ public class ExtensionTest {
     }
 
     @Test
+    @Order(1)
     public void one() {
         Assertions.assertEquals("The cake is ready!", this.extension.timerStatus(0));
         Assertions.assertEquals("The cake is still baking!", this.extension.timerStatus(1));
@@ -20,6 +25,7 @@ public class ExtensionTest {
     }
 
     @Test
+    @Order(2)
     public void two() {
         Assertions.assertEquals(5, this.extension.estimatePrepTime(new String[]{"milk", "sugar", "eggs", "flour", "chocolate"}, 1));
         Assertions.assertEquals(10, this.extension.estimatePrepTime(new String[]{"milk", "sugar", "eggs", "flour", "chocolate"}, 2));
@@ -28,6 +34,7 @@ public class ExtensionTest {
     }
 
     @Test
+    @Order(3)
     public void three() {
         Assertions.assertEquals(0, this.extension.calculateGramsOfSugar(new String[]{"milk", "flour", "eggs"}, 3));
         Assertions.assertEquals(100, this.extension.calculateGramsOfSugar(new String[]{"milk", "flour", "sugar"}, 1));
