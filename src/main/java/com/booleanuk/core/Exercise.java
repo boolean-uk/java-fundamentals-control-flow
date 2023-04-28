@@ -109,7 +109,6 @@ public class Exercise {
     // "milk", or false if not
     // https://www.w3schools.com/java/java_ref_string.asp
     public boolean ten(String sentence) {
-
         return sentence.contains("milk");
     }
 
