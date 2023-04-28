@@ -98,14 +98,19 @@ public class Exercise {
     // 9. Use a conditional statement to return true if the array provided is not empty
     // or false if it is empty
     public boolean nine(int[] nums) {
-        return false;
+        if (nums.length == 0) {
+            return false;
+        } else {
+            return true;
+        }
     }
 
     // 10. Use a conditional statement to return true if the provided string contains the word
     // "milk", or false if not
     // https://www.w3schools.com/java/java_ref_string.asp
     public boolean ten(String sentence) {
-        return false;
+
+        return sentence.contains("milk");
     }
 
     // 11. Use conditional statements to return the number 3 if the provided string contains
@@ -113,13 +118,25 @@ public class Exercise {
     // Return the number 9 if the string contains both coffee and milk.
     // Otherwise, return the number 0.
     public int eleven(String sentence) {
-        return -1;
+        if (sentence.contains("milk") && sentence.contains("coffee")) {
+            return 9;
+        } else if (sentence.contains("milk")) {
+            return 3;
+        } else if (sentence.contains("coffee")) {
+            return 6;
+        } else {
+            return 0;
+        }
     }
 
     // 12. Use conditional statements to return true if num is more than or equal to lower and is
     // less than or equal to upper, otherwise return false.
     public boolean twelve(int num, int lower, int upper) {
-        return false;
+        if (num >= lower && num <= upper) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     /*
@@ -135,6 +152,16 @@ public class Exercise {
         20+     | Adult
      */
     public String thirteen(int age) {
-        return "Not implemented yet!";
+        if (age == 0) {
+            return "Baby";
+        } else if (age < 5) {
+            return "Toddler";
+        } else if (age < 13) {
+            return "Child";
+        } else if (age < 20) {
+            return "Teenager";
+        } else {
+            return "Adult";
+        }
     }
 }
