@@ -137,7 +137,12 @@ public class Exercise {
     // 12. Use conditional statements to return true if num is more than or equal to lower and is
     // less than or equal to upper, otherwise return false.
     public boolean twelve(int num, int lower, int upper) {
-        return false;
+        if ( num >= lower && num <= upper) {
+            return true;
+        }  else {
+            return false;
+        }
+
     }
 
     /*
@@ -153,6 +158,18 @@ public class Exercise {
         20+     | Adult
      */
     public String thirteen(int age) {
-        return "Not implemented yet!";
+        String name;
+        if(age == 0){
+            name = "Baby";
+        } else if ( 1 <= age && age <= 4) {
+            name = "Toddler";
+        } else if( 5 <= age && age <= 12) {
+            name = "Child";
+        } else if(13 <= age && age <= 19) {
+            name = "Teenager";
+        } else {
+            name = "Adult";
+        }
+        return name;
     }
 }
