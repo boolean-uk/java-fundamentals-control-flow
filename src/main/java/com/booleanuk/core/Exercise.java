@@ -40,41 +40,41 @@ public class Exercise {
     // 1. What will the returned value be if I run sayGoodMorning(false)?
     // Change the returned value in the method below to your answer. It is case-sensitive.
     public String one() {
-        return "";
+        return "Good day!";
     }
 
     // 2. What will the output be if I run sayGoodMorning(true)?
     // Change the returned value in the method below to your answer. It is case-sensitive.
     public String two() {
-        return "";
+        return "Good morning!";
     }
 
     // 3. What will the output be if I run sayGoodMorning("Hello" == "Hello")?
     // Change the returned value in the method below to your answer. It is case-sensitive.
     public String three() {
-        return "";
+        return "Good morning!";
     }
 
     // 4. What will the output be if I run sayGoodMorning("A word" != "Another word")
     public String four() {
-        return "";
+        return "Good morning!";
     }
 
     // 5. What will the output be if I run sayGoodMorning(25 != 25)
     public String five() {
-        return "";
+        return "Good day!";
     }
 
     // 6. Use a conditional statement to return "Correct!" if the input is more than 7
     // or "Wrong!" if not
     public String six(int num) {
-        return "Not implemented yet!";
+        return num > 7 ? "Correct!" : "Wrong!";
     }
 
     // 7. Use a conditional statement to return "Correct!" if the input is false
     // or "Wrong!" if not
     public String seven(boolean bool) {
-        return "Not implemented yet!";
+        return bool ? "Wrong!" : "Correct!";
     }
 
     // 8. Use a conditional statement to return "Correct!" if numOne is more than or equal to numTwo
