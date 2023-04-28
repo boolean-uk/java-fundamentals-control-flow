@@ -80,20 +80,21 @@ public class Exercise {
     // 8. Use a conditional statement to return "Correct!" if numOne is more than or equal to numTwo
     // or "Wrong!" if not
     public String eight(int numOne, int numTwo) {
-        return "Not implemented yet!";
+        return numOne >= numTwo ? "Correct!" : "Wrong!";
     }
 
     // 9. Use a conditional statement to return true if the array provided is not empty
     // or false if it is empty
     public boolean nine(int[] nums) {
-        return false;
+        return nums.length == 0 ? false : true ;
     }
 
     // 10. Use a conditional statement to return true if the provided string contains the word
     // "milk", or false if not
     // https://www.w3schools.com/java/java_ref_string.asp
     public boolean ten(String sentence) {
-        return false;
+        boolean res = sentence.contains("milk");
+        return res;
     }
 
     // 11. Use conditional statements to return the number 3 if the provided string contains
@@ -101,12 +102,18 @@ public class Exercise {
     // Return the number 9 if the string contains both coffee and milk.
     // Otherwise, return the number 0.
     public int eleven(String sentence) {
-        return -1;
+        int sum = 0;
+        if(ten(sentence)) {sum +=3;}
+        if(sentence.contains("coffee")) {sum +=6;}
+        return sum;
     }
 
     // 12. Use conditional statements to return true if num is more than or equal to lower and is
     // less than or equal to upper, otherwise return false.
     public boolean twelve(int num, int lower, int upper) {
+        if ( num >= lower && num <=upper) {
+            return true;
+        }
         return false;
     }
 
@@ -123,6 +130,17 @@ public class Exercise {
         20+     | Adult
      */
     public String thirteen(int age) {
-        return "Not implemented yet!";
+        if ( age == 0) {
+            return "Baby";
+        } else if (age <= 4) {
+            return "Toddler";
+        } else if (age <=12) {
+            return "Child";
+        } else if (age <= 19) {
+            return "Teenager";
+        } else {
+            return "Adult";
+        }
+
     }
 }
