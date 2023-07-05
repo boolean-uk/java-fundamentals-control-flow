@@ -56,5 +56,12 @@ public class Extension extends ExtensionBase {
         You may need to use programming techniques we have yet to cover in the course to solve this task.
      */
 
-
+    public int calculateGramsOfSugar(String[] ingredients, int layers) {
+        for (String ingredient : ingredients) {
+            if (ingredient.equals("sugar")) {
+                return 100 * layers;
+            }
+        }
+        return 0;
+    }
 }
