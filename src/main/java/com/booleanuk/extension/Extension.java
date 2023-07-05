@@ -14,9 +14,16 @@ public class Extension extends ExtensionBase {
         and "The timer finished ages ago!" if the remaining minutes is a negative number
      */
 
-
-
-
+    @Override
+    public String timerStatus(int remaining) {
+        if (remaining == 0) {
+            return "The cake is ready!";
+        }
+        if (remaining > 0) {
+            return "The cake is still baking!";
+        }
+        return "The timer finished ages ago!";
+    }
     /*  2.
         Create a method named estimatePrepTime that accepts two parameters:
         - an array of ingredients, e.g. ["sugar", "milk", "flour", "eggs"]
@@ -40,8 +47,6 @@ public class Extension extends ExtensionBase {
 
         You may need to use programming techniques we have yet to cover in the course to solve this task.
      */
-
-
 
 
 }
