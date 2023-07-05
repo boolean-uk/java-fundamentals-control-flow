@@ -40,7 +40,7 @@ public class Exercise {
     // 1. What will the returned value be if I run sayGoodMorning(false)?
     // Change the returned value in the method below to your answer. It is case-sensitive.
     public String one() {
-        return "";
+        return "Good day!";
     }
 
     // 2. What will the output be if I run sayGoodMorning(true)?
@@ -52,7 +52,7 @@ public class Exercise {
     // 3. What will the output be if I run sayGoodMorning("Hello" == "Hello")?
     // Change the returned value in the method below to your answer. It is case-sensitive.
     public String three() {
-        return "";
+        return "Good morning!";
     }
 
     // 4. What will the output be if I run sayGoodMorning("A word" != "Another word")
@@ -62,7 +62,7 @@ public class Exercise {
 
     // 5. What will the output be if I run sayGoodMorning(25 != 25)
     public String five() {
-        return "";
+        return "Good day!";
     }
 
     // 6. Use a conditional statement to return "Correct!" if the input is more than 7
@@ -74,7 +74,7 @@ public class Exercise {
     // 7. Use a conditional statement to return "Correct!" if the input is false
     // or "Wrong!" if not
     public String seven(boolean bool) {
-        return "Not implemented yet!";
+        return bool ? "Wrong!" : "Correct!";
     }
 
     // 8. Use a conditional statement to return "Correct!" if numOne is more than or equal to numTwo
@@ -86,7 +86,7 @@ public class Exercise {
     // 9. Use a conditional statement to return true if the array provided is not empty
     // or false if it is empty
     public boolean nine(int[] nums) {
-        return false;
+        return nums.length!=0 ? true : false;
     }
 
     // 10. Use a conditional statement to return true if the provided string contains the word
@@ -101,7 +101,17 @@ public class Exercise {
     // Return the number 9 if the string contains both coffee and milk.
     // Otherwise, return the number 0.
     public int eleven(String sentence) {
-        return -1;
+
+        if(sentence.contains("milk") && sentence.contains("coffee")){
+            return 9;
+        }
+        if(sentence.contains("milk"))
+        {
+            return 3;
+        } else if (sentence.contains("coffee")) {
+            return 6;
+        }
+        return 0;
     }
 
     // 12. Use conditional statements to return true if num is more than or equal to lower and is
@@ -123,6 +133,18 @@ public class Exercise {
         20+     | Adult
      */
     public String thirteen(int age) {
-        return "Not implemented yet!";
+
+        if(age==0)
+        {
+            return "Baby";
+        } else if (age<=4) {
+            return "Toddler";
+        } else if (age<=12) {
+            return "Child";
+        } else if (age<20) {
+            return "Teenager";
+        }
+
+        return"Adult";
     }
 }

@@ -14,7 +14,16 @@ public class Extension extends ExtensionBase {
         and "The timer finished ages ago!" if the remaining minutes is a negative number
      */
 
-
+    public String timerStatus(int minutes)
+    {
+        if(minutes>0)
+        {
+            return "The cake is still baking!";
+        } else if (minutes==0) {
+            return "The cake is ready!";
+        }
+        return "The timer finished ages ago!";
+    }
 
 
     /*  2.
@@ -40,7 +49,18 @@ public class Extension extends ExtensionBase {
 
         You may need to use programming techniques we have yet to cover in the course to solve this task.
      */
+    public int calculateGramsOfSugar(String[] ingredients, int layers)
+    {
 
+        for (String ing:ingredients
+             ) {
+            if(ing.toLowerCase().equals("sugar"))
+            {
+                return 100 * layers;
+            }
+        }
+        return 0;
+    }
 
 
 
