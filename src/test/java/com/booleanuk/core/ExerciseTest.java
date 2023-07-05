@@ -22,7 +22,7 @@ class ExerciseTest {
 
     @Test
     public void answerThree() {
-        Assertions.assertEquals("Good morning!", this.exercise.three());
+        Assertions.assertEquals("Good day!", this.exercise.three());
     }
 
     @Test
@@ -57,7 +57,7 @@ class ExerciseTest {
 
     @Test
     public void answerNine() {
-        Assertions.assertTrue(this.exercise.nine(new int[]{3, 6, 7}));
+        Assertions.assertTrue(this.exercise.nine(new int[] { 3, 6, 7 }));
         Assertions.assertFalse(this.exercise.nine(new int[0]));
     }
 
