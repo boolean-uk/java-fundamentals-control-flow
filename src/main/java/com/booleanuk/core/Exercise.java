@@ -101,7 +101,14 @@ public class Exercise {
     // Return the number 9 if the string contains both coffee and milk.
     // Otherwise, return the number 0.
     public int eleven(String sentence) {
-        return -1;
+        var result = 0;
+        if (sentence.contains("milk")) {
+            result += 3;
+        }
+        if (sentence.contains("coffee")) {
+            result += 6;
+        }
+        return result;
     }
 
     // 12. Use conditional statements to return true if num is more than or equal to lower and is
