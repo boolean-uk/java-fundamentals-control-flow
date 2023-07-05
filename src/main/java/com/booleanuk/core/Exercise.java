@@ -155,7 +155,7 @@ public class Exercise {
         20+     | Adult
      */
     public String thirteen(int age) {
-        if (age >= 0 && age < 1){
+        if (age == 0 ){
             return "Baby";
         } else if (age >= 1 && age <= 4){
             return "Toddler";
