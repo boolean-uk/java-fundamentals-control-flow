@@ -52,12 +52,12 @@ public class Exercise {
     // 3. What will the output be if I run sayGoodMorning("Hello" == "Hello")?
     // Change the returned value in the method below to your answer. It is case-sensitive.
     public String three() {
-        return "";
+        return "Good morning!";
     }
 
     // 4. What will the output be if I run sayGoodMorning("A word" != "Another word")
     public String four() {
-        return "";
+        return "Good morning!";
     }
 
     // 5. What will the output be if I run sayGoodMorning(25 != 25)
@@ -74,13 +74,13 @@ public class Exercise {
     // 7. Use a conditional statement to return "Correct!" if the input is false
     // or "Wrong!" if not
     public String seven(boolean bool) {
-        return "Not implemented yet!";
+        return !bool ? "Correct!" : "Wrong!";
     }
 
     // 8. Use a conditional statement to return "Correct!" if numOne is more than or equal to numTwo
     // or "Wrong!" if not
     public String eight(int numOne, int numTwo) {
-        return "Not implemented yet!";
+        return numOne >= numTwo ? "Correct!" : "Wrong!";
     }
 
     // 9. Use a conditional statement to return true if the array provided is not empty
@@ -101,13 +101,16 @@ public class Exercise {
     // Return the number 9 if the string contains both coffee and milk.
     // Otherwise, return the number 0.
     public int eleven(String sentence) {
-        return -1;
+    return sentence.contains("coffee") && sentence.contains("milk") ? 9 :
+           sentence.contains("milk") ? 3 :
+           sentence.contains("coffee") ? 6 :
+           0;
     }
 
     // 12. Use conditional statements to return true if num is more than or equal to lower and is
     // less than or equal to upper, otherwise return false.
     public boolean twelve(int num, int lower, int upper) {
-        return false;
+        return num <= upper && num >= lower;
     }
 
     /*
