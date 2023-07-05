@@ -13,6 +13,15 @@ public class Extension extends ExtensionBase {
         "The cake is still baking!" if there are any remaining minutes left,
         and "The timer finished ages ago!" if the remaining minutes is a negative number
      */
+    public String timerStatus(int minutesLeft){
+        if(minutesLeft == 0){
+            return "The cake is ready!";
+        } else if (minutesLeft > 0) {
+            return "The cake is still baking!";
+        } else {
+            return "The timer finished ages ago!";
+        }
+    }
 
 
 

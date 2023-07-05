@@ -78,26 +78,42 @@ public class Exercise {
     // 7. Use a conditional statement to return "Correct!" if the input is false
     // or "Wrong!" if not
     public String seven(boolean bool) {
-        return "Not implemented yet!";
+        if(bool == false){
+            return "Correct!";
+        } else{
+            return "Wrong!";
+        }
     }
 
     // 8. Use a conditional statement to return "Correct!" if numOne is more than or equal to numTwo
     // or "Wrong!" if not
     public String eight(int numOne, int numTwo) {
-        return "Not implemented yet!";
+        if(numOne >= numTwo){
+            return "Correct!";
+        } else{
+            return "Wrong!";
+        }
     }
 
     // 9. Use a conditional statement to return true if the array provided is not empty
     // or false if it is empty
     public boolean nine(int[] nums) {
-        return false;
+        if(nums.length != 0){
+            return true;
+        } else{
+            return false;
+        }
     }
 
     // 10. Use a conditional statement to return true if the provided string contains the word
     // "milk", or false if not
     // https://www.w3schools.com/java/java_ref_string.asp
     public boolean ten(String sentence) {
-        return false;
+        if(sentence.contains("milk")){
+            return true;
+        } else{
+            return false;
+        }
     }
 
     // 11. Use conditional statements to return the number 3 if the provided string contains
@@ -105,13 +121,25 @@ public class Exercise {
     // Return the number 9 if the string contains both coffee and milk.
     // Otherwise, return the number 0.
     public int eleven(String sentence) {
-        return -1;
+        if(sentence.contains("coffee") && sentence.contains("milk")){
+            return 9;
+        } else if (sentence.contains("coffee")) {
+            return 6;
+        } else if (sentence.contains("milk")) {
+            return 3;
+        } else {
+        return 0;
+        }
     }
 
     // 12. Use conditional statements to return true if num is more than or equal to lower and is
     // less than or equal to upper, otherwise return false.
     public boolean twelve(int num, int lower, int upper) {
-        return false;
+        if(num>=lower && num<=upper){
+            return true;
+        } else {
+            return false;
+        }
     }
 
     /*
@@ -127,6 +155,16 @@ public class Exercise {
         20+     | Adult
      */
     public String thirteen(int age) {
-        return "Not implemented yet!";
+        if (age>=20){
+            return "Adult";
+        } else if (age>=13){
+            return "Teenager";
+        } else if (age>=5){
+            return "Child";
+        } else if (age>=1){
+            return "Toddler";
+        } else {
+            return "Baby";
+        }
     }
 }
