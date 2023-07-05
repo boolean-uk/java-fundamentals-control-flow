@@ -27,7 +27,13 @@ public class Extension extends ExtensionBase {
         If a prep time of 0 is provided, the method should assume each ingredient takes 2 minutes to prepare.
      */
 
+    public int estimatePrepTime(String[] array, int minutes){
+        if(minutes == 0){
+            minutes = 2;
+        }
 
+        return array.length*minutes;
+    }
 
     /*  3.
         Create a method named calculateGramsOfSugar that accepts two parameters:
