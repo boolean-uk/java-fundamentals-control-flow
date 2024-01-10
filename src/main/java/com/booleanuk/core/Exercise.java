@@ -135,6 +135,7 @@ public class Exercise {
         }else {
             return 0;
         }
+
     }
 
     // 12. Use conditional statements to return true if num is more than or equal to lower and is
