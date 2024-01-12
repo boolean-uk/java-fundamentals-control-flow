@@ -96,7 +96,10 @@ public class Exercise {
     // "milk", or false if not
     // https://www.w3schools.com/java/java_ref_string.asp
     public boolean ten(String sentence) {
-        return sentence.contains("milk");
+        if(sentence.contains("milk")) {
+            return true;
+        }
+        return false;
     }
 
     // 11. Use conditional statements to return the number 3 if the provided string contains
