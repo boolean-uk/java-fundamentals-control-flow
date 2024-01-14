@@ -52,17 +52,17 @@ public class Exercise {
     // 3. What will the output be if I run sayGoodMorning("Hello".equals("Hello"))?
     // Change the returned value in the method below to your answer. It is case-sensitive.
     public String three() {
-        return sayGoodMorning("Hello".equals("Hello"));
+        return "Good morning!";
     }
 
     // 4. What will the output be if I run sayGoodMorning(!"A word".equals("Another word"))
     public String four() {
-        return sayGoodMorning(!"A word".equals("Another word"));
+        return "Good morning!";
     }
 
     // 5. What will the output be if I run sayGoodMorning(25 != 25)
     public String five() {
-        return sayGoodMorning(25 != 25);
+        return "Good day!";
     }
 
     // 6. Use a conditional statement to return "Correct!" if the input is more than 7
