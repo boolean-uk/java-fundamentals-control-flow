@@ -1,6 +1,6 @@
 package com.booleanuk.extension;
-
 import com.booleanuk.helpers.ExtensionBase;
+import java.util.Arrays;
 
 public class Extension extends ExtensionBase {
     /*  1.
@@ -14,7 +14,15 @@ public class Extension extends ExtensionBase {
         and "The timer finished ages ago!" if the remaining minutes is a negative number
      */
 
-
+    public String timerStatus(int minutesLeftOnTimer) {
+        if (minutesLeftOnTimer == 0) {
+            return "The cake is ready!";
+        } else if (minutesLeftOnTimer > 0) {
+            return "The cake is still baking!";
+        } else {
+            return "The timer finished ages ago!";
+        }
+    }
 
 
     /*  2.
@@ -27,6 +35,13 @@ public class Extension extends ExtensionBase {
         If a prep time of 0 is provided, the method should assume each ingredient takes 2 minutes to prepare.
      */
 
+    public int estimatePrepTime(String[] ingredients, int prepTimeInMinutes) {
+        if (prepTimeInMinutes < 1) {
+            return ingredients.length * 2;
+        } else {
+            return ingredients.length * prepTimeInMinutes;
+        }
+    }
 
 
     /*  3.
@@ -40,8 +55,13 @@ public class Extension extends ExtensionBase {
 
         You may need to use programming techniques we have yet to cover in the course to solve this task.
      */
+    public int calculateGramsOfSugar(String[] ingredients, int layers) {
 
-
-
+        if (Arrays.asList(ingredients).contains("sugar")) {
+            return layers * 100;
+        } else {
+            return 0;
+        }
+    }
 
 }
