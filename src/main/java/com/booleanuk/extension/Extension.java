@@ -13,7 +13,16 @@ public class Extension extends ExtensionBase {
         "The cake is still baking!" if there are any remaining minutes left,
         and "The timer finished ages ago!" if the remaining minutes is a negative number
      */
-
+    public String timerStatus(int minutesRemaining) {
+        if(minutesRemaining > 0) {
+            return "The cake is still baking!";
+        } else if(minutesRemaining == 0) {
+            return "The cake is ready!";
+        } else if(minutesRemaining < 0) {
+            return "The timer finished ages ago!";
+        }
+        return "somethings wrong with the timer!";
+    }
 
 
 
@@ -26,7 +35,13 @@ public class Extension extends ExtensionBase {
         provided and the prep time per ingredient.
         If a prep time of 0 is provided, the method should assume each ingredient takes 2 minutes to prepare.
      */
-
+    public int estimatePrepTime(String[] ingredients, int timeToPrep) {
+        if(timeToPrep == 0) {
+            return ingredients.length * 2;
+        } else {
+            return ingredients.length * timeToPrep;
+        }
+    }
 
 
     /*  3.
@@ -40,7 +55,14 @@ public class Extension extends ExtensionBase {
 
         You may need to use programming techniques we have yet to cover in the course to solve this task.
      */
-
+    public int calculateGramsOfSugar(String[] ingredients, int numberOfLayers) {
+        for(String ingredient : ingredients) {
+            if (ingredient.equals("sugar")) {
+                return 100 * numberOfLayers;
+            }
+        }
+        return 0;
+    }
 
 
 
