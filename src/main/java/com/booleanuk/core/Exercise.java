@@ -40,60 +40,90 @@ public class Exercise {
     // 1. What will the returned value be if I run sayGoodMorning(false)?
     // Change the returned value in the method below to your answer. It is case-sensitive.
     public String one() {
-        return "";
+        return "Good day!";
     }
 
     // 2. What will the output be if I run sayGoodMorning(true)?
     // Change the returned value in the method below to your answer. It is case-sensitive.
     public String two() {
-        return "";
+        return "Good morning!";
     }
 
     // 3. What will the output be if I run sayGoodMorning("Hello".equals("Hello"))?
     // Change the returned value in the method below to your answer. It is case-sensitive.
     public String three() {
-        return "";
+        return "Good morning!";
     }
 
     // 4. What will the output be if I run sayGoodMorning(!"A word".equals("Another word"))
     public String four() {
-        return "";
+        return "Good morning!";
     }
 
     // 5. What will the output be if I run sayGoodMorning(25 != 25)
     public String five() {
-        return "";
+        return "Good day!";
     }
 
     // 6. Use a conditional statement to return "Correct!" if the input is more than 7
     // or "Wrong!" if not
     public String six(int num) {
-        return "Not implemented yet!";
+        String out="";
+        if (num>7){
+            out="Correct!";
+        }else {
+            out="Wrong!";
+        }
+        return out;
     }
 
     // 7. Use a conditional statement to return "Correct!" if the input is false
     // or "Wrong!" if not
     public String seven(boolean bool) {
-        return "Not implemented yet!";
+        String out="";
+        if (!bool){
+            out="Correct!";
+        }else {
+            out="Wrong!";
+        }
+        return out;
     }
 
     // 8. Use a conditional statement to return "Correct!" if numOne is more than or equal to numTwo
     // or "Wrong!" if not
     public String eight(int numOne, int numTwo) {
-        return "Not implemented yet!";
+        String out="";
+        if (numOne>=numTwo){
+            out="Correct!";
+        }else{
+            out="Wrong!";
+        }
+        return out;
     }
 
     // 9. Use a conditional statement to return true if the array provided is not empty
     // or false if it is empty
     public boolean nine(int[] nums) {
-        return false;
+        boolean out;
+        if (!(nums.length==0)){
+            out = true;
+        }else {
+            out= false;
+        }
+        return out;
     }
 
     // 10. Use a conditional statement to return true if the provided string contains the word
     // "milk", or false if not
-    // https://www.w3schools.com/java/java_ref_string.asp
+    // https://www.w3schols.com/java/java_ref_string.asp
     public boolean ten(String sentence) {
-        return false;
+        boolean out;
+        if (sentence.contains("milk")){
+            out = true;
+        }else {
+            out= false;
+        }
+        return out;
     }
 
     // 11. Use conditional statements to return the number 3 if the provided string contains
@@ -101,13 +131,28 @@ public class Exercise {
     // Return the number 9 if the string contains both coffee and milk.
     // Otherwise, return the number 0.
     public int eleven(String sentence) {
-        return -1;
+        int number = 0;
+
+        if(sentence.contains("coffee") && sentence.contains("milk")){
+            number=9;
+        }else if (sentence.contains("milk")){
+            number=3;
+        }else if(sentence.contains("coffee")){
+            number=6;
+        }
+        return number;
     }
 
     // 12. Use conditional statements to return true if num is more than or equal to lower and is
     // less than or equal to upper, otherwise return false.
     public boolean twelve(int num, int lower, int upper) {
-        return false;
+        boolean out;
+        if (num>=lower && num<=upper){
+            out = true;
+        }else{
+            out= false;
+        }
+        return out;
     }
 
     /*
@@ -123,6 +168,18 @@ public class Exercise {
         20+     | Adult
      */
     public String thirteen(int age) {
-        return "Not implemented yet!";
+        String out="";
+        if (age==0){
+            out="Baby";
+        }else if(age>0 && age<=4){
+            out="Toddler";
+        } else if (age>4 && age<=12){
+            out="Child";
+        } else if (age>12 && age<=19){
+            out="Teenager";
+        } else if (age>19){
+            out="Adult";
+        }
+        return out;
     }
 }
