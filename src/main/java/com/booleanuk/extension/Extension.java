@@ -2,6 +2,8 @@ package com.booleanuk.extension;
 
 import com.booleanuk.helpers.ExtensionBase;
 
+import java.lang.reflect.Array;
+
 public class Extension extends ExtensionBase {
     /*  1.
         We're going to improve our cake baking capabilities!
@@ -14,7 +16,14 @@ public class Extension extends ExtensionBase {
         and "The timer finished ages ago!" if the remaining minutes is a negative number
      */
 
+    public String timerStatus(int minutesLeft) {
+        if (minutesLeft > 0)
+            return "The cake is still baking!";
+        else if (minutesLeft == 0)
+            return "The cake is ready!";
 
+        return "The timer finished ages ago!";
+    }
 
 
     /*  2.
@@ -27,7 +36,9 @@ public class Extension extends ExtensionBase {
         If a prep time of 0 is provided, the method should assume each ingredient takes 2 minutes to prepare.
      */
 
-
+    public int estimatePrepTime(String[] ingredients, int time) {
+        return ingredients.length * (time == 0 ? 2 : time);
+    }
 
     /*  3.
         Create a method named calculateGramsOfSugar that accepts two parameters:
@@ -41,7 +52,15 @@ public class Extension extends ExtensionBase {
         You may need to use programming techniques we have yet to cover in the course to solve this task.
      */
 
+    public boolean containsIngredient(String[] ingredients, String compareIngredient) {
+        for (String ingredient : ingredients)
+            if (ingredient.equals(compareIngredient)) return true;
+        return false;
+    }
 
+    public int calculateGramsOfSugar(String[] ingredients, int cakeLayers) {
+        return cakeLayers * 100 * (containsIngredient(ingredients, "sugar") ? 1 : 0);
+    }
 
 
 }
