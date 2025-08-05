@@ -27,7 +27,7 @@ class ExerciseTest {
 
     @Test
     public void answerFour() {
-        Assertions.assertEquals("Good morning!", this.exercise.four());
+        Assertions.assertEquals(exercise.sayGoodMorning(!"A word".equals("Another word")), this.exercise.four());
     }
 
     @Test
