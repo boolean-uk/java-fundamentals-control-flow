@@ -2,6 +2,8 @@ package com.booleanuk.extension;
 
 import com.booleanuk.helpers.ExtensionBase;
 
+import java.util.Arrays;
+
 public class Extension extends ExtensionBase {
     /*  1.
         We're going to improve our cake baking capabilities!
@@ -13,6 +15,14 @@ public class Extension extends ExtensionBase {
         "The cake is still baking!" if there are any remaining minutes left,
         and "The timer finished ages ago!" if the remaining minutes is a negative number
      */
+    public String timerStatus (int minutes) {
+        if (minutes == 0) {
+            return "The cake is ready!";
+        } else if (minutes < 0) {
+            return "The timer finished ages ago!";
+        } else
+            return "The cake is still baking!";
+    }
 
 
 
@@ -26,6 +36,20 @@ public class Extension extends ExtensionBase {
         provided and the prep time per ingredient.
         If a prep time of 0 is provided, the method should assume each ingredient takes 2 minutes to prepare.
      */
+    public int estimatePrepTime(String[] ingredients, int prepTime) {
+        int totalPrepTime = 0;
+        if (prepTime == 0) {
+            for (String ingredient : ingredients) {
+                totalPrepTime += 2;
+            }
+        } else if (prepTime > 0) {
+            for (String ingredient : ingredients) {
+                totalPrepTime += prepTime;
+            }
+
+        }
+        return totalPrepTime;
+    }
 
 
 
@@ -34,12 +58,23 @@ public class Extension extends ExtensionBase {
         - an array of ingredients that will always contain 3 ingredients
         - the number of layers the cake has
 
-        The cake will need 100g of sugar per layer, if that ingredient is present in the provided list of ingredients
+        The cake will need 100g of sugar per layer if that ingredient is present in the provided list of ingredients
         and 0g if that ingredient is missing.
         The method should return the number of grams of sugar needed to make the cake.
 
         You may need to use programming techniques we have yet to cover in the course to solve this task.
      */
+    //denna
+    public int calculateGramsOfSugar (String[] ingredients, int layers) {
+
+        int gramsOfSugar = 0;
+
+        if (ingredients.length == 3)
+           if (Arrays.stream(ingredients).anyMatch(i -> i.equals("sugar"))) {
+               gramsOfSugar += 100*layers;
+           }
+           return gramsOfSugar;
+    }
 
 
 
